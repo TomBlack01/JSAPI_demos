@@ -1,9 +1,7 @@
 require([
   "esri/WebScene",
-  "esri/views/SceneView",
-  "esri/geometry/Point"
-], function (WebScene, SceneView, Point) {
-
+  "esri/views/SceneView"
+], function (WebScene, SceneView) {
   const webscene = new WebScene({
     portalItem: {
       id: "1dbcd382b2d847feb77131dd8aeeae8d"
@@ -40,7 +38,7 @@ require([
               type: "fill",
               material: {
                 color: [255, 255, 255, 0],
-                //colorMixMode: "replace"
+                colorMixMode: "replace"
               },
               edges: {
                 type: "solid",
@@ -98,8 +96,7 @@ require([
         requestAnimationFrame(glow);
       });
 
-  })
-    .catch(console.error);
+  }).catch(console.error);
 
   let musicPlaying = false;
 
